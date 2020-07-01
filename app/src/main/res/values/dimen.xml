@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_heading_29">29sp</dimen>
+    <dimen name="text_sub_heading_20">20sp</dimen>
+    <dimen name="text_detail_14">14sp</dimen>
+    <dimen name="text_label_12">12sp</dimen>
+
+    <dimen name="rv_margin_16">16dp</dimen>
+    <dimen name="rv_item_marginBottom_24">24dp</dimen>
+    <dimen name="rv_item_subHeading_margin_12">12dp</dimen>
+    <dimen name="rv_item_label_margin_12">12dp</dimen>
+
+    <dimen name="detail_padding_24">24dp</dimen>
+    <dimen name="detail_heading_marginLeft_24">24dp</dimen>
+    <dimen name="detail_heading_marginRight_24">24dp</dimen>
+    <dimen name="detail_heading_paddingBottom_64">64dp</dimen>
+    <dimen name="detail_subheading_paddingBottom_16">16dp</dimen>
+    <dimen name="backButton_size_42">42dp</dimen>
+    
+</resources>

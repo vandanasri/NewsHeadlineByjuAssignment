@@ -1,0 +1,96 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="heading_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/HeadingWhiteColor</item>
+        <item name="android:textSize">@dimen/text_heading_29</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:text">@string/headlines</item>
+        <item name="android:fontFamily">@font/roboto_slab_bold</item>
+    </style>
+
+    <style name="fragment_container_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:background">@color/screenBackgroundColor</item>
+    </style>
+
+    <style name="recyclerView_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">@dimen/rv_margin_16</item>
+    </style>
+
+    <style name="item_title_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/subHeadingColor</item>
+        <item name="android:textSize">@dimen/text_sub_heading_20</item>
+        <item name="android:layout_margin">@dimen/rv_item_subHeading_margin_12</item>
+        <item name="android:fontFamily">@font/roboto_slab</item>
+    </style>
+
+    <style name="item_source_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/labelColor</item>
+        <item name="android:textSize">@dimen/text_label_12</item>
+        <item name="android:layout_margin">@dimen/rv_item_subHeading_margin_12</item>
+        <item name="android:fontFamily">@font/roboto_slab_bold</item>
+    </style>
+
+    <style name="item_date_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/labelColor</item>
+        <item name="android:textSize">@dimen/text_label_12</item>
+        <item name="android:layout_margin">@dimen/rv_item_subHeading_margin_12</item>
+        <item name="android:fontFamily">@font/roboto_slab</item>
+    </style>
+
+    <style name="back_button_style">
+        <item name="android:layout_width">@dimen/backButton_size_42</item>
+        <item name="android:layout_height">@dimen/backButton_size_42</item>
+        <item name="android:background">@drawable/transparent_circle</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_margin">@dimen/detail_heading_marginLeft_24</item>
+        <item name="android:src">@mipmap/ic_back_arrow</item>
+
+    </style>
+
+    <style name="detail_title_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/subHeadingColor</item>
+        <item name="android:textSize">@dimen/text_heading_29</item>
+        <item name="android:fontFamily">@font/roboto_slab_bold</item>
+        <item name="android:paddingBottom">@dimen/detail_heading_paddingBottom_64</item>
+    </style>
+
+    <style name="detail_source_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/subHeadingColor</item>
+        <item name="android:textSize">@dimen/text_sub_heading_20</item>
+        <item name="android:fontFamily">@font/roboto_slab</item>
+        <item name="android:paddingBottom">@dimen/detail_subheading_paddingBottom_16</item>
+    </style>
+
+    <style name="detail_description_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/labelColor</item>
+        <item name="android:textSize">@dimen/text_detail_14</item>
+        <item name="android:fontFamily">@font/roboto_slab</item>
+    </style>
+
+</resources>

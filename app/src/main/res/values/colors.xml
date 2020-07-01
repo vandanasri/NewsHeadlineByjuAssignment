@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#464646</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#bababa</color>
+
+    <color name="HeadingWhiteColor">#ffffff</color>
+    <color name="subHeadingColor">#f2f2f2</color>
+    <color name="labelColor">#bababa</color>
+    <color name="screenBackgroundColor">#464646</color>
+</resources>
