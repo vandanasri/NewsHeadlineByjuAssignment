@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.vandana.newshealinesapp.R
 import com.vandana.newshealinesapp.utils.common.Resource
+import com.vandana.newshealinesapp.utils.common.Status
 import com.vandana.newshealinesapp.utils.network.NetworkHelper
 import io.reactivex.disposables.CompositeDisposable
 import javax.net.ssl.HttpsURLConnection

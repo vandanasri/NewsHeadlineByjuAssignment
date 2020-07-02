@@ -3,6 +3,7 @@ package com.vandana.newshealinesapp.di.component
 import android.app.Application
 import android.content.Context
 import com.vandana.newshealinesapp.NewsHeadlinesApplication
+import com.vandana.newshealinesapp.data.repository.FetchNewHeadlinesRepo
 import com.vandana.newshealinesapp.di.ApplicationContext
 import com.vandana.newshealinesapp.di.module.ApplicationModule
 import com.vandana.newshealinesapp.utils.network.NetworkHelper
@@ -25,4 +26,6 @@ interface ApplicationComponent {
     fun getCompositeDisposable() : CompositeDisposable
 
     fun getNetworkHelper(): NetworkHelper
+
+    fun getNewsHeadlineData(): FetchNewHeadlinesRepo
 }
