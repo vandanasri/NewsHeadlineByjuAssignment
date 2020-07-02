@@ -7,6 +7,10 @@ import com.vandana.newshealinesapp.ui.main.MainViewModel
 import dagger.Module
 import dagger.Provides
 import androidx.lifecycle.ViewModelProviders
+import com.vandana.newshealinesapp.ui.newsHealinesFragment.NewsHeadlineFragmentViewModel
+import com.vandana.newshealinesapp.utils.ViewModelProviderFactory
+import com.vandana.newshealinesapp.utils.network.NetworkHelper
+import io.reactivex.disposables.CompositeDisposable
 
 @Module
 class ActivityModule (private val activity: BaseActivity<*>) {
@@ -16,8 +20,12 @@ class ActivityModule (private val activity: BaseActivity<*>) {
     fun provideContext(): Context = activity
 
     @Provides
-    fun provideMainViewModel(
+    fun provideMainViewModel(compositeDisposable: CompositeDisposable,
+                             networkHelper: NetworkHelper
     ): MainViewModel =
-        ViewModelProviders.of(activity).get(MainViewModel::class.java)
+        ViewModelProviders.of(activity,ViewModelProviderFactory(MainViewModel::class){
+            MainViewModel(compositeDisposable,networkHelper)
+        }
+        ).get(MainViewModel::class.java)
 
 }
