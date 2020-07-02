@@ -2,8 +2,11 @@ package com.vandana.newshealinesapp.di.module
 
 import android.app.Application
 import android.content.Context
+import androidx.room.Room
 import com.vandana.newshealinesapp.BuildConfig
 import com.vandana.newshealinesapp.NewsHeadlinesApplication
+import com.vandana.newshealinesapp.data.db.DatabaseService
+
 import com.vandana.newshealinesapp.data.remote.NetworkService
 import com.vandana.newshealinesapp.data.remote.Networking
 import com.vandana.newshealinesapp.di.ApplicationContext
@@ -40,5 +43,13 @@ class ApplicationModule(private val application: NewsHeadlinesApplication) {
             application.cacheDir,
             10 * 1024 * 1024 // 10MB
         )
+
+    @Provides
+    @Singleton
+    fun provideDatabaseService(): DatabaseService =
+        Room.databaseBuilder(
+            application, DatabaseService::class.java,
+            "news-headline-db"
+        ).build()
 
 }

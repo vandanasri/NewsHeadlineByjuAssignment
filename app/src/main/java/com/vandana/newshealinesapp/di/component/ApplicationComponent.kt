@@ -3,6 +3,8 @@ package com.vandana.newshealinesapp.di.component
 import android.app.Application
 import android.content.Context
 import com.vandana.newshealinesapp.NewsHeadlinesApplication
+import com.vandana.newshealinesapp.data.db.DatabaseService
+import com.vandana.newshealinesapp.data.remote.NetworkService
 import com.vandana.newshealinesapp.data.repository.FetchNewHeadlinesRepo
 import com.vandana.newshealinesapp.di.ApplicationContext
 import com.vandana.newshealinesapp.di.module.ApplicationModule
@@ -28,4 +30,8 @@ interface ApplicationComponent {
     fun getNetworkHelper(): NetworkHelper
 
     fun getNewsHeadlineData(): FetchNewHeadlinesRepo
+
+    fun getNetworkService(): NetworkService
+
+    fun getDatabaseService(): DatabaseService
 }

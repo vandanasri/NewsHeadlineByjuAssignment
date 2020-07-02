@@ -5,9 +5,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardUseCompatPadding="true"
     app:cardPreventCornerOverlap="true"
-    app:cardElevation="10dp">
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="12dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -15,9 +19,9 @@
         >
 
     <ImageView
-        android:id="@+id/title"
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:scaleType="centerCrop"
         android:src="@mipmap/no_image_icon"
         android:background="@color/colorPrimary"
@@ -29,17 +33,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/title"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
         android:background="@drawable/gradient_layer"
         android:paddingBottom="12dp">
 
-    <TextView
-        android:id="@+id/tvTitleName"
-        style="@style/item_title_text_style"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Billions of Dollars May Be Waiting to Enter Bitcoin, Stunning USDT Data Shows"
-        />
+        <TextView
+            android:id="@+id/tvTitleName"
+            style="@style/item_title_text_style"
+            android:text="Billions of Dollars May Be Waiting to Enter Bitcoin, Stunning USDT Data Shows"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvSourceName"

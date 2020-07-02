@@ -15,7 +15,7 @@
         <item name="android:textSize">@dimen/text_heading_29</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:text">@string/headlines</item>
-        <item name="android:fontFamily">@font/roboto_slab_bold</item>
+
     </style>
 
     <style name="fragment_container_style">
@@ -27,7 +27,6 @@
     <style name="recyclerView_style">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_margin">@dimen/rv_margin_16</item>
     </style>
 
     <style name="item_title_text_style">

@@ -6,7 +6,7 @@
     <dimen name="text_detail_14">14sp</dimen>
     <dimen name="text_label_12">12sp</dimen>
 
-    <dimen name="rv_margin_16">16dp</dimen>
+    <dimen name="rv_padding_8">8dp</dimen>
     <dimen name="rv_item_marginBottom_24">24dp</dimen>
     <dimen name="rv_item_subHeading_margin_12">12dp</dimen>
     <dimen name="rv_item_label_margin_12">12dp</dimen>

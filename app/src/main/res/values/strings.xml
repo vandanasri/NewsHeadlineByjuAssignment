@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">NewsHealinesApp</string>
-    <string name="headlines">Headlines</string>
+    <string name="headlines">HEADLINES</string>
 
     <string name="network_connection_error">Internet connection lost, please retry again</string>
     <string name="network_default_error">Something wrong happened, please retry again</string>

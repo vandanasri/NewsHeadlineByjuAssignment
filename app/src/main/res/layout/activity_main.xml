@@ -8,7 +8,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,6 +17,7 @@
         <TextView
             android:id="@+id/tvHeadlines"
             style="@style/heading_text_style"
+            android:fontFamily="@font/roboto_slab_bold"
             tools:layout_editor_absoluteX="177dp"
             tools:layout_editor_absoluteY="40dp" />
     </androidx.appcompat.widget.Toolbar>

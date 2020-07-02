@@ -13,7 +13,7 @@ data class HeadlinesDataModel(
     var  totalResults:Integer? =null,
     @SerializedName("articles")
     @Expose
-    var articles: List<Article>?  = null
+    var articles: List<Article>
 
 )
 {
@@ -40,7 +40,7 @@ data class HeadlinesDataModel(
         var author:String? =null
         @SerializedName("title")
         @Expose
-        var title:String? =null
+        var title:String? = null
 
         @SerializedName("description")
         @Expose

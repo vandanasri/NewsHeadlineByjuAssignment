@@ -57,6 +57,14 @@ dependencies {
     // GSON Parser
     implementation "com.google.code.gson:gson:$gson_version"
 
+    // Database
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-rxjava2:2.1.0-alpha06"
+
+    //glide
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
