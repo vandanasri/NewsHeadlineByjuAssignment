@@ -1,6 +1,7 @@
 package com.vandana.newshealinesapp.ui.newsHealinesFragment
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.vandana.newshealinesapp.R
 import com.vandana.newshealinesapp.data.db.NewsHeadlineEntity
+import com.vandana.newshealinesapp.ui.detail.DetailActivity
 import kotlinx.android.synthetic.main.item_headlines.view.*
 
 class NewsHeadlineAdapter (private var newsHeadlineDataList: List<NewsHeadlineEntity>) :
@@ -40,6 +42,16 @@ class NewsHeadlineAdapter (private var newsHeadlineDataList: List<NewsHeadlineEn
             itemView.tvDate.text = value.publishedAt
             Glide.with(itemView.context).load(value.url).into(itemView.imageView)
 
+            itemView.setOnClickListener {
+                val intent = Intent(mContext, DetailActivity::class.java).apply {
+                    putExtra("title", value.title)
+                    putExtra("desc", value.description)
+                   putExtra("source", value.source)
+                    putExtra("url", value.url)
+                }
+
+                mContext.startActivity(intent)
+            }
 
 
         }

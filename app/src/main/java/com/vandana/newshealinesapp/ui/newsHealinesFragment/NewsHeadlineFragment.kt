@@ -30,13 +30,12 @@ class NewsHeadlineFragment : BaseFragment<NewsHeadlineFragmentViewModel>()
     override fun injectDependencies(fragmentComponent: FragmentComponent) = fragmentComponent.inject(this)
 
     override fun setupView(view: View) {
-       viewModel.getDataCount()
     }
 
     override fun setupObservers() {
         super.setupObservers()
 
-        fetchHeadlineDataFromRepo()
+        viewModel.getNewsHeadlinesDataFromServer()
 
         viewModel.isLoading.observe(this, Observer {
             when (it.status) {
@@ -60,16 +59,5 @@ class NewsHeadlineFragment : BaseFragment<NewsHeadlineFragmentViewModel>()
         })
     }
 
-    //fetching headline data
-    private fun fetchHeadlineDataFromRepo(){
 
-        viewModel.dataCount.observe(this, Observer {
-            if(it==0){
-                viewModel.getNewsHeadlinesDataFromServer()
-            }else{
-                viewModel.getAllNewsHeadlineDataFromDatabase()
-            }
-        })
-
-    }
 }

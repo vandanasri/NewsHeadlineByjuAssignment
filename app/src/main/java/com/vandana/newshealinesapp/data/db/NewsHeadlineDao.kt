@@ -14,12 +14,9 @@ interface NewsHeadlineDao{
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(entity: List<NewsHeadlineEntity> ) : Completable
 
-    @Delete
-    fun delete(entity: NewsHeadlineEntity)
 
-
-    @Query("SELECT COUNT("+ DbConstants.NEWS_HEADLINE_TITLE+") FROM " +DbConstants.NEWS_HEADLINE_TABLE)
-    fun getDataCount() : Flowable<Int>
+    @Query("DELETE FROM "+ DbConstants.NEWS_HEADLINE_TABLE)
+    fun deleteTable()
 
 
 }

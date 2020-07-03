@@ -22,7 +22,6 @@ private val fetchNewHeadlinesRepo : FetchNewHeadlinesRepo)
     var isLoading : MutableLiveData<Resource<Status>> = MutableLiveData()
     val mNewsHeadlineDataList: MutableLiveData<List<NewsHeadlineEntity>> = MutableLiveData()
     val msgFromDB : MutableLiveData<String> = MutableLiveData()
-    val dataCount : MutableLiveData<Int> = MutableLiveData()
 
 
 
@@ -34,8 +33,8 @@ private val fetchNewHeadlinesRepo : FetchNewHeadlinesRepo)
                 fetchNewHeadlinesRepo.fetchNewsHeadLinesDataFromRemote()
                     .subscribeOn(Schedulers.io())
                     .doOnSuccess {
-
-                    insertNewsHeadlineDataIntoDatabase(it.articles)
+                        fetchNewHeadlinesRepo.deleteTable()
+                        insertNewsHeadlineDataIntoDatabase(it.articles)
                     }
                     .subscribe(
                         {
@@ -48,10 +47,6 @@ private val fetchNewHeadlinesRepo : FetchNewHeadlinesRepo)
                         })
             )
         } else {
-
-            if(dataCount.value == 0)
-                msgFromDB.postValue("There is no cached data available, please check your network connection and try for live data")
-            else
                 getAllNewsHeadlineDataFromDatabase()
         }
     }
@@ -95,13 +90,15 @@ private val fetchNewHeadlinesRepo : FetchNewHeadlinesRepo)
 
 
     //to get all the data from database
-    fun getAllNewsHeadlineDataFromDatabase() {
+    private fun getAllNewsHeadlineDataFromDatabase() {
         compositeDisposable.add(
             fetchNewHeadlinesRepo.fetchNewsHeadlineDataFromDatabase()
                 .subscribeOn(Schedulers.io())
                 .subscribe(
                     {
-                        Log.v("@ALLDATA", it.size.toString())
+                        if(it.isEmpty())
+                            msgFromDB.postValue("There is no cached data available, please check your network connection and try for live data")
+                        else
                         mNewsHeadlineDataList.postValue(it)
                     },
                     {
@@ -109,28 +106,6 @@ private val fetchNewHeadlinesRepo : FetchNewHeadlinesRepo)
                     }
                 )
         )
-    }
-
-
-    // to get number of counts of data inserted in db table
-    fun getDataCount() {
-        //var dataCount = 0
-        compositeDisposable.add(
-            fetchNewHeadlinesRepo.getNewsHeadlineDataCount()
-                .subscribeOn(Schedulers.io())
-                .subscribe(
-                    {
-                        Log.v("@Count All", it.toString())
-                        //dataCount = it
-                        dataCount.postValue(it)
-
-                    },
-                    {
-                        Log.d("TAG getDataCount Error", it.toString())
-                    }
-                )
-        )
-
     }
 
 

@@ -29,11 +29,8 @@ class FetchNewHeadlinesRepo @Inject constructor(private val networkService: Netw
     //to fetch all news headline data from database
     fun fetchNewsHeadlineDataFromDatabase(): Flowable<List<NewsHeadlineEntity>> = databaseService.getNewsHeadlineDao().getAllNewsHeadlineData()
 
-    //to count all data in news headline table
-    fun getNewsHeadlineDataCount() : Flowable<Int> = databaseService.getNewsHeadlineDao().getDataCount()
-
     //to delete Headline Entity
-    fun deleteHeadlineEntity(entity: NewsHeadlineEntity) = databaseService.getNewsHeadlineDao().delete(entity)
+   fun deleteTable() = databaseService.getNewsHeadlineDao().deleteTable()
 
 
 
