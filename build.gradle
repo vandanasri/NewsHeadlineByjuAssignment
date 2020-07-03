@@ -48,4 +48,8 @@ ext{
 
     //Glide
     glide_version = '4.7.1'
+
+    //Test
+    espresso_version = '3.2.0'
+    fragment_version = '1.2.2'
 }

@@ -17,5 +17,7 @@
     <dimen name="detail_heading_paddingBottom_64">64dp</dimen>
     <dimen name="detail_subheading_paddingBottom_16">16dp</dimen>
     <dimen name="backButton_size_42">42dp</dimen>
-    
+    <dimen name="backButton_padding_8">8dp</dimen>
+    <dimen name="backButton_margin_16">16dp</dimen>
+
 </resources>

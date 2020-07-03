@@ -22,5 +22,9 @@ class DetailActivity : BaseActivity<DetailViewModel>() {
         tvDescription.text= intent.getStringExtra("desc")
         tvDate.text= intent.getStringExtra("date")
         tvDetailSourceName.text = intent.getStringExtra("source")
+
+        ivBack.setOnClickListener {
+            finish()
+        }
     }
 }

@@ -20,6 +20,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+    <!--<ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:padding="8dp"
+        android:background="@drawable/transparent_circle"
+        android:src="@drawable/ic_back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
